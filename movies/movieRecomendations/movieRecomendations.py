@@ -10,7 +10,6 @@ from io import BytesIO
 
 def generateMovie(search):
   _ = load_dotenv('.env')
-  openai.api_key  = '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'
 
   with open('jsons/movie_descriptions_embeddings.json', 'r') as file:
       file_content = file.read()
@@ -32,7 +31,6 @@ def generateMovie(search):
 def generateDescription(search):
   #Se lee del archivo .env la api key de openai
   _ = load_dotenv('.env')
-  openai.api_key  = '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'
 
   def get_completion(prompt, model="gpt-3.5-turbo"):
       messages = [{"role": "user", "content": prompt}]
@@ -57,7 +55,7 @@ def generateDescription(search):
 def generateImage(search):
     #Se lee del archivo .env la api key de openai
   _ = load_dotenv('openAI.env')
-  openai.api_key  = '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'
+
 
 
   #Se hace la conexión con la API de generación de imágenes. El prompt en este caso es:
