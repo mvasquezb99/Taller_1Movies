@@ -2,8 +2,6 @@ from django.shortcuts import render
 from django.http import HttpResponse 
 from .models import Movie
 
-# Create your views here.
-
 
 def Home(request):
     #return render(request, 'index.html', {'name': 'Miguel Vasquez Bojanini'})

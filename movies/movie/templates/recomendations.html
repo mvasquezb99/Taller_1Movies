@@ -1,0 +1,33 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<div class="container">
+    <h1 class="title-center mt-4">Recommendations for: {{response}}</h1>
+    <form class="mt-4">
+        <div class="mb-3">
+            <label for="prompt" class="form-label">Insert prompt</label>
+            <input type="text" class="form-control" name="search" />
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <div class="card mt-4">
+        <div class="row">
+            <div class="col-md-4">
+                <img class="img-fluid object-fit-fill border-rounded" alt=""
+                    src="{{urlImage}}" crossorigin="anonymous">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{response}}
+                    </h5>
+                    </p>
+                    <p class="card-text">
+                       {{description}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
